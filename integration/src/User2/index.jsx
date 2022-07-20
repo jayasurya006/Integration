@@ -25,7 +25,7 @@ const User2 = () => {
       <div style={{ float: 'right' }}>
         <Space size={20}>
           <Switch sie='large' unCheckedChildren="English" checkedChildren="தமிழ்" defaultChecked onChange={(e) => { changeLanguage(e) }} />
-          <Button type='primary' danger >{data.addUser.button}</Button>
+          <Button type='primary' warning >{data.addUser.button}</Button>
         </Space>
       </div>
       <TableList datas={data} />

@@ -2,15 +2,27 @@ import { Card, Table, Col, Row } from 'antd'
 import { useState } from 'react';
 import { Store } from '../../source'
 
-export const TableList = ({datas}) => {
-    const [data, setData] = useState([]);
-    
-    const columns = [
+export const TableList = ({ datas }) => {
+
+    const dataSource = [
         {
-            title: '#',
-            dataIndex: 'name',
-            key: 'name',
+            key: '1',
+            name: 'Mike',
+            age: 32,
+            mail: 'test@gmail.com',
+            mobile: 'test@gmail.com',
         },
+        {
+            key: '2',
+            name: 'John',
+            age: 42,
+            mail: 'test@gmail.com',
+            mobile: 'test@gmail.com',
+        },
+    ];
+
+    const columns = [
+       
         {
             title: datas.addUser.name,
             dataIndex: 'name',
@@ -34,7 +46,7 @@ export const TableList = ({datas}) => {
     ];
     return (
         <>
-            <Table dataSource={data} columns={columns} />
+            <Table dataSource={dataSource} columns={columns} />
         </>
     )
 }
