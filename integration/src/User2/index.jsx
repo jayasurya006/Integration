@@ -1,10 +1,16 @@
-import { Button, Breadcrumb, Switch, Space, message } from "antd";
+import { Button, Breadcrumb, Switch, Space, message, Select } from "antd";
 import React, { useState } from "react";
 import { Store } from "../source";
+import { FormComp } from "./form";
 import { TableList } from "./table";
 
 const User2 = () => {
   const [data, setData] = useState(Store.language.Tamil);
+  const [dataSource, setDataSource] = useState([]); 
+  const [show, setShow] = useState(false);
+
+  const openMoadel = () => setShow(true);
+  const closeModel = () => setShow(false);
 
   const changeLanguage = (e) => {
     if (e === false) {
@@ -25,12 +31,13 @@ const User2 = () => {
       </Breadcrumb>
       <div style={{ float: 'right' }}>
         <Space size={20}>
+          <Select placeholder='Select Theme' />
           <Switch sie='large' unCheckedChildren="English" checkedChildren="தமிழ்" defaultChecked onChange={(e) => { changeLanguage(e) }} />
-          <Button type='primary' warning >{data.addUser.button}</Button>
+          <Button type='primary' warning onClick={openMoadel}>{data.addUser.button}</Button>
         </Space>
       </div>
-      <TableList datas={data} />
-
+      <TableList dataSource={dataSource} datas={data} />
+      <FormComp dataSource={dataSource} setDataSource={setDataSource} closeModel={closeModel} show={show} />
     </div>
   );
 };

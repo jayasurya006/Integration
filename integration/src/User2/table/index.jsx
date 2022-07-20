@@ -2,24 +2,7 @@ import { Card, Table, Col, Row } from 'antd'
 import { useState } from 'react';
 import { Store } from '../../source'
 
-export const TableList = ({ datas }) => {
-
-    const dataSource = [
-        {
-            key: '1',
-            name: 'Mike',
-            age: 32,
-            mail: 'test@gmail.com',
-            mobile: 'test@gmail.com',
-        },
-        {
-            key: '2',
-            name: 'John',
-            age: 42,
-            mail: 'test@gmail.com',
-            mobile: 'test@gmail.com',
-        },
-    ];
+export const TableList = ({ datas, dataSource }) => {
 
     const columns = [
        
@@ -35,7 +18,7 @@ export const TableList = ({ datas }) => {
         },
         {
             title: datas.addUser.email,
-            dataIndex: 'mail',
+            dataIndex: 'email',
             key: 'address',
         },
         {
@@ -46,7 +29,7 @@ export const TableList = ({ datas }) => {
     ];
     return (
         <>
-            <Table dataSource={dataSource} columns={columns} />
+            <Table dataSource={dataSource.reverse()} columns={columns} />
         </>
     )
 }
