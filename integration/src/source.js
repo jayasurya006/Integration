@@ -1,9 +1,10 @@
-const data = {
-  English: {},
-  Tamil: {},
-};
-
-const Themes = {
-  Light: {},
-  dark: {},
+export const Store = {
+  language: {
+    English: {},
+    Tamil: {},
+  },
+  Themes: {
+    Light: {},
+    dark: {},
+  },
 };
