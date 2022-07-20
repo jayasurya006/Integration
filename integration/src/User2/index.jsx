@@ -12,6 +12,7 @@ const User2 = () => {
     } else {
       setData(Store.language.Tamil)
     }
+
   }
   return (
     <div style={{ padding: '30px' }}>
@@ -29,6 +30,7 @@ const User2 = () => {
         </Space>
       </div>
       <TableList datas={data} />
+
     </div>
   );
 };
