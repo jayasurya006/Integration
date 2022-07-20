@@ -1,13 +1,15 @@
-import { Button, Breadcrumb } from "antd";
+import { Button, Breadcrumb, Switch, Space } from "antd";
 import React, { useState } from "react";
-import { FormComp } from "./form";
 import { TableList } from "./table";
 
 const User2 = () => {
   const [open, setOpen] = useState(false);
-
   const onClose = () => setOpen(false)
   const visible = () => setOpen(true)
+
+  const changeLanguage = (e) => {
+    alert(e);
+  }
   return (
     <div style={{ padding: '30px' }}>
       <Breadcrumb>
@@ -15,16 +17,15 @@ const User2 = () => {
         <Breadcrumb.Item>
           <a href="">Details</a>
         </Breadcrumb.Item>
-        
-      </Breadcrumb>
-      <Button onClick={visible} type='primary' danger style={{ float: 'right' }}>Add New Records</Button>
 
+      </Breadcrumb>
+      <div style={{ float: 'right' }}>
+        <Space>
+          <Switch unCheckedChildren="English" checkedChildren="Tamil" defaultChecked onChange={(e) => {changeLanguage(e)}} />
+          <Button onClick={visible} type='primary' danger >Add New Records</Button>
+        </Space>
+      </div>
       <TableList />
-      <FormComp
-        onClose={onClose}
-        visible={visible}
-        open={open}
-      />
     </div>
   );
 };
