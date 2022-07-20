@@ -1,7 +1,11 @@
 import React from "react";
 
 const User2 = () => {
-  return <div>index</div>;
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
-export default index;
+export default User2;
