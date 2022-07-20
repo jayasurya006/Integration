@@ -1,10 +1,10 @@
 import React from "react";
-import MainUi from "./ui/index";
+import { MainUi } from "./ui/index";
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <MainUi />
     </div>
   );
 }
