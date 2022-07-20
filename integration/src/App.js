@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
-import User1 from "./User1";
-import User2 from "./User2";
+import React from "react";
+import User1 from "./User1/index";
+import User2 from "./User2/index";
 
 function App() {
   return (
     <div className="App">
-      <User1 />
-      <User2 />
+    <Main />
     </div>
   );
 }

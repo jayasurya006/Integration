@@ -4,4 +4,4 @@ const User1 = () => {
   return <div>index</div>;
 };
 
-export default index;
+export default User1;
