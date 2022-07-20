@@ -2,39 +2,34 @@ import { Card, Table, Col, Row } from 'antd'
 import { useState } from 'react';
 import { Store } from '../../source'
 
-export const TableList = () => {
-    const [data, setData] = useState([]);
-    
+export const TableList = ({ datas, dataSource }) => {
+
     const columns = [
+       
         {
-            title: '#',
+            title: datas.addUser.name,
             dataIndex: 'name',
             key: 'name',
         },
         {
-            title: 'Name',
-            dataIndex: 'name',
-            key: 'name',
-        },
-        {
-            title: 'Age',
+            title: datas.addUser.age,
             dataIndex: 'age',
             key: 'age',
         },
         {
-            title: 'Email',
-            dataIndex: 'mail',
+            title: datas.addUser.email,
+            dataIndex: 'email',
             key: 'address',
         },
         {
-            title: 'Mobile',
+            title: datas.addUser.mobile,
             dataIndex: 'mobile',
             key: 'address',
         },
     ];
     return (
         <>
-            <Table dataSource={data} columns={columns} />
+            <Table dataSource={dataSource.reverse()} columns={columns} />
         </>
     )
 }
