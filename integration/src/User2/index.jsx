@@ -1,31 +1,34 @@
-import { Button, Breadcrumb, Switch, Space } from "antd";
+import { Button, Breadcrumb, Switch, Space, message } from "antd";
 import React, { useState } from "react";
+import { Store } from "../source";
 import { TableList } from "./table";
 
 const User2 = () => {
-  const [open, setOpen] = useState(false);
-  const onClose = () => setOpen(false)
-  const visible = () => setOpen(true)
+  const [data, setData] = useState(Store.language.Tamil);
 
   const changeLanguage = (e) => {
-    alert(e);
+    if (e === false) {
+      setData(Store.language.English)
+    } else {
+      setData(Store.language.Tamil)
+    }
   }
   return (
     <div style={{ padding: '30px' }}>
       <Breadcrumb>
-        <Breadcrumb.Item>Home</Breadcrumb.Item>
+        <Breadcrumb.Item>{data.breadCrumb.home}</Breadcrumb.Item>
         <Breadcrumb.Item>
-          <a href="">Details</a>
+          <a href="">{data.breadCrumb.details}</a>
         </Breadcrumb.Item>
 
       </Breadcrumb>
       <div style={{ float: 'right' }}>
-        <Space>
-          <Switch unCheckedChildren="English" checkedChildren="Tamil" defaultChecked onChange={(e) => {changeLanguage(e)}} />
-          <Button onClick={visible} type='primary' danger >Add New Records</Button>
+        <Space size={20}>
+          <Switch sie='large' unCheckedChildren="English" checkedChildren="தமிழ்" defaultChecked onChange={(e) => { changeLanguage(e) }} />
+          <Button type='primary' danger >{data.addUser.button}</Button>
         </Space>
       </div>
-      <TableList />
+      <TableList datas={data} />
     </div>
   );
 };

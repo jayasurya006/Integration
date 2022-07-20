@@ -2,7 +2,7 @@ import { Card, Table, Col, Row } from 'antd'
 import { useState } from 'react';
 import { Store } from '../../source'
 
-export const TableList = () => {
+export const TableList = ({datas}) => {
     const [data, setData] = useState([]);
     
     const columns = [
@@ -12,22 +12,22 @@ export const TableList = () => {
             key: 'name',
         },
         {
-            title: 'Name',
+            title: datas.addUser.name,
             dataIndex: 'name',
             key: 'name',
         },
         {
-            title: 'Age',
+            title: datas.addUser.age,
             dataIndex: 'age',
             key: 'age',
         },
         {
-            title: 'Email',
+            title: datas.addUser.email,
             dataIndex: 'mail',
             key: 'address',
         },
         {
-            title: 'Mobile',
+            title: datas.addUser.mobile,
             dataIndex: 'mobile',
             key: 'address',
         },
