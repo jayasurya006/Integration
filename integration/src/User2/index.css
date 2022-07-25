@@ -1,0 +1,23 @@
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  height: 70vh;
+  border-radius: 30px;
+}
+
+.ant-table-wrapper {
+  min-width: 90%;
+}
+
+.lang {
+  cursor: pointer;
+  color: #9c47bb;
+}
+
+.lang:hover {
+  color: #511667;
+  font-weight: 300;
+}

@@ -3,9 +3,8 @@ import User2 from "../User2";
 
 export const MainUi = () => {
   return (
-    <>
-      <User1 />
+    <div style={{ height: "100vh" }}>
       <User2 />
-    </>
+    </div>
   );
 };

@@ -1,38 +1,142 @@
+#dark .table-heading {
+  color: rgb(241, 31, 241);
+}
+
+#dark {
+  background-color: #b365d0;
+}
+
+#light .table {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+}
+
+#light .table-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  color: #8c55aa;
+}
+#dark Button {
+  background-color: #b40af3;
+  color: rgb(255, 255, 255);
+  outline: #b40af3;
+}
+
 .App {
-  text-align: center;
+  overflow-y: scroll;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#light span {
+  color: #c784e9;
+  font-family: "Ubuntu", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#dark .ant-table-thead > tr > th {
+  color: rgb(90, 38, 97);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#light .ant-table-thead > tr > th {
+  color: rgb(153, 98, 160);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-table-cell {
+  color: rgba(49, 36, 48, 0.799);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#dark span {
+  color: #fff;
+}
+
+#dark .thead {
+  background-color: #7a3c91;
+}
+
+#light {
+  background-color: #f3ebf6;
+}
+
+#dark .table {
+  background-color: #fff;
+}
+
+#dark .table-heading {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  color: #9c47bb;
+}
+
+#dark .form {
+  background-color: #38004c;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+#light .form {
+  background-color: #fff;
+  border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.signin {
+  padding-top: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+#light .signin {
+  color: #8c55aa;
+}
+
+#dark .signin {
+  color: #ffffff;
+}
+
+#light Input {
+  color: rgb(38, 50, 56);
+  background: rgba(136, 126, 126, 0.085);
+}
+
+#dark .form Button {
+  border-color: #b40af3;
+  outline: #8c55aa;
+}
+
+.form Button {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
+  border: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.form Button:hover {
+  cursor: pointer;
+  border-radius: 5em;
+  color: #fff;
+  background: linear-gradient(to right, #9c27b0, #e040fb);
+  border: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+#light .lang {
+  font-family: "Ubuntu", sans-serif;
+  color: #9c47bb;
+  font-size: 40px;
+}
+
+#light .ant-switch:hover {
+  border-color: red;
+  outline: none;
 }
